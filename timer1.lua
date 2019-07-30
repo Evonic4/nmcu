@@ -23,7 +23,7 @@ if fseta == 0 then
     tmr.stop(1)
     tmr.unregister(1)
 end
---сбор и подготовка данных
+
 data1 = wifi.sta.getip()
 local p0 = string.gsub(readf("pin0.txt", "0", true), "\n", "")
 local p1 = string.gsub(readf("pin1.txt", "0", true), "\n", "")
