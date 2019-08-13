@@ -23,6 +23,10 @@ function receive_http(sck, data)
     fun1 = 1
     treg(2)
   end
+  if request == 'GET /lum1=1 HTTP/1.1' then
+    glaz(cfg["l1gpio"], cfg["l1morgulja"], cfg["l1paus"], cfg["l1kol"])
+  end
+
    --pins --pin0 
   for i = 0, 8 do
     if request == 'GET /pin'..i..' HTTP/1.1' then

@@ -1,6 +1,13 @@
 fseta = 0
 fun1 = 0
 
+function glaz(l1gpio1, l1morgulja1, l1paus1, l1kol1)
+    gpio.mode (l1gpio1, gpio.OUTPUT)
+    gpio.write (l1gpio1, gpio.HIGH)
+    gpio.write (l1gpio1, gpio.LOW)
+    gpio.serout (l1gpio1, gpio.HIGH, {l1morgulja1, l1paus1}, l1kol1, 1)
+end
+
 function readf(d1, find1, znach)
     local str1 = ""
     file.open(d1, "r+")
